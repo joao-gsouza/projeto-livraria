@@ -1,0 +1,16 @@
+<div id ="div-cadastro">
+    <form [formGroup]="formulario" (submit)="submitForm()" >
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Nome:</label>
+            <input id ="nome" formControlName="nome" type="text" class="form-control">
+        </div>
+        
+        <div class="form-group">
+            <label for="exampleInputPassword1">Preço:</label>
+            <input id="preco" formControlName="preco" type="number" class="form-control">
+        </div>
+
+        <button type="submit" class="btn btn-dark btn-lg">Cadastrar</button>
+  </form>
+</div>

@@ -1,0 +1,31 @@
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Categoria</th>
+        <th scope="col">Preço</th>
+        <th>Opções</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let livro of livros">
+            <td>
+                {{livro.id}}
+            </td>
+            <td>
+                {{livro.nome}}
+            </td>
+            <td>
+                {{livro.categoria.nome}}
+            </td>
+            <td>
+                {{livro.preco}}
+            </td>
+            <td>
+                <button type="button" class="btn btn-link" (click)="onClickEditar(livro.id)">Editar</button> | <button type="button" class="btn btn-link" (click)="onClickRemover(livro.id)">Remover</button>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
